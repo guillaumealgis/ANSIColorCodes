@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ANSI Color Codes</title>
+
+    <meta name="description" content="An online reminder for devs who can't remember ANSI escape codes"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="content">
+        <h1>ANSI Color Codes</h1>
+
+        <div id="term" class="mono-font">
+            $ echo -e '<span id="str-with-markup">the quick brown fox jumps over the lazy dog</span>'<br/>
+            <span id="str-result">the quick brown fox jumps over the lazy dog</span>
+        </div>
+
+        <ul class="colors mono-font">
+            <li class="background-none"><a href="#" data-color-name="none" data-color-code="">∅</a></li>
+            <li class="background-black"><a href="#" data-color-name="black" data-color-code="0">30</a></li>
+            <li class="background-red"><a href="#" data-color-name="red" data-color-code="1">31</a></li>
+            <li class="background-green"><a href="#" data-color-name="green" data-color-code="2">32</a></li>
+            <li class="background-yellow"><a href="#" data-color-name="yellow" data-color-code="3">33</a></li>
+            <li class="background-blue"><a href="#" class="selected" data-color-name="blue" data-color-code="4">34</a></li>
+            <li class="background-magenta"><a href="#" data-color-name="magenta" data-color-code="5">35</a></li>
+            <li class="background-cyan"><a href="#" data-color-name="cyan" data-color-code="6">36</a></li>
+            <li class="background-white"><a href="#" data-color-name="white" data-color-code="7">37</a></li>
+        </ul>
+
+        <div class="clear"></div>
+
+        <br/>
+
+        <div class="cols-3">
+            <ul id="background-toggler" class="toggler">
+                <li><a href="#" class="selected">foreground</a></li>
+                <li><a href="#">background</a></li>
+            </ul>
+        </div>
+
+        <div class="cols-3">
+            <ul id="weight-toggler" class="toggler">
+                <li><a href="#" class="selected">normal</a></li>
+                <li><a href="#">bright / bold</a></li>
+            </ul>
+        </div>
+
+        <div class="cols-3">
+            <ul id="style-toggler" class="toggler">
+                <li><a href="#" class="selected">normal</a></li>
+                <li><a href="#">underlined</a></li>
+            </ul>
+        </div>
+
+        <!-- <ul id="colors-toggler" class="toggler">
+            <li><a href="#" class="selected">ANSI</a></li>
+            <li><a href="#">256 colors palette</a></li>
+            <li><a href="#">24 bits "True Color"</a></li>
+        </ul> -->
+
+        <div class="clear"></div>
+
+        <footer>
+            <ul>
+                <li>made with ❤&#xFE0E; by <a href="https://twitter.com/guillaumealgis">Guillaume Algis</a></li>
+                <li><a href="https://github.com/guillaume-algis/ANSIColorCodes">fork on github</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/ANSI_escape_code">Wikipedia / ANSI escape codes</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

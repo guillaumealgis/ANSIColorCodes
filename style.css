@@ -1,0 +1,333 @@
+/* Reset */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+    background: #1D1D1D;
+    color: #D5DAD7;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Gudea, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #D5DAD7;
+    transition: color 400ms;
+}
+
+a:hover {
+    color: #f1f1f1;
+}
+
+.clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.mono-font {
+    font-family: "Droid Sans Mono", "Source Code Pro", "Consolas", "Ubuntu Mono", Inconsolata, "Monaco", "DejaVu Sans Mono", "Anonymous Pro", Menlo, "Lucida Console", "Segoe UI Mono", Courier, "Courier New", monospace;
+}
+
+#content {
+    width: 760px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+#term {
+    margin: 30px auto;
+    padding: 10px 15px;
+    background: #2D2D2D;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    line-height: 150%;
+}
+
+.ansi-markup {
+    color: #fafffc;
+}
+
+.colors {
+    list-style: none;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.colors li {
+    width: 84px; /* ~ 760 / 9 */
+    height: 40px;
+    float: left;
+    line-height: 39px;
+    border-top: 1px solid #818181;
+    border-bottom: 1px solid #818181;
+}
+
+.colors li a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: inherit;
+}
+
+.colors .selected::before {
+    content: "→ ";
+}
+
+.colors .selected::after {
+    content: " ←";
+}
+
+.colors li:first-child {
+    border-left: 1px solid #818181;
+    border-radius: 5px 0 0 5px;
+}
+
+.colors li:last-child {
+    border-right: 1px solid #818181;
+    border-radius: 0 5px 5px 0;
+}
+
+.cols-3 {
+    width: 33.3%;
+    float: left;
+    margin-top: 20px;
+}
+
+.cols-3 > :first-child {
+    padding: 0 35px;
+}
+
+.toggler li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.toggler a {
+    padding: 1px 8px 2px 8px;
+    border-radius: 4px;
+}
+
+.toggler a.selected {
+    color: #141414;
+    background: #e2e2e2;
+    cursor: default;
+}
+
+footer {
+    margin-top: 130px;
+    text-align: center;
+    font-style: 0.8em;
+    color: #545454;
+}
+
+footer li {
+    display: inline;
+}
+
+footer li:after {
+    content: "‒";
+    margin: 20px;
+}
+
+footer li:last-child:after {
+    content: none;
+}
+
+footer a {
+    color: inherit;
+}
+
+/******************************************************************************
+**    COLORS
+******************************************************************************/
+
+#term .bright {
+    font-weight: bold;
+}
+
+#term .underlined {
+    text-decoration: underline;
+}
+
+
+.foreground-black {
+    color: #000000;
+}
+
+.foreground-red {
+    color: #C96552;
+}
+
+.foreground-green {
+    color: #B6BE59;
+}
+
+.foreground-yellow {
+    color: #EEC765;
+}
+
+.foreground-blue {
+    color: #6D99C1;
+}
+
+.foreground-magenta {
+    color: #B09098;
+}
+
+.foreground-cyan {
+    color: #87B5AE;
+}
+
+.foreground-white {
+    color: #D5DAD7;
+}
+
+.bright.foreground-black {
+    color: #373B40;
+}
+
+.bright.foreground-red {
+    color: #DC6062;
+}
+
+.bright.foreground-green {
+    color: #C6D256;
+}
+
+.bright.foreground-yellow {
+    color: #FFDD58;
+}
+
+.bright.foreground-blue {
+    color: #7FAAD7;
+}
+
+.bright.foreground-magenta {
+    color: #C99EAA;
+}
+
+.bright.foreground-cyan {
+    color: #95D6CC;
+}
+
+.bright.foreground-white {
+    color: #E7EDEA;
+}
+
+.background-none {
+    background-color: #f0f0f0;
+    background-image:
+        linear-gradient(45deg, #cfcfcf 25%, transparent 25%, transparent 75%, #cfcfcf 75%, #cfcfcf 100%),
+        linear-gradient(45deg, #cfcfcf 25%, transparent 25%, transparent 75%, #cfcfcf 75%, #cfcfcf 100%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+.background-black {
+    background-color: #000000;
+}
+
+.background-red {
+    background-color: #C96552;
+}
+
+.background-green {
+    background-color: #B6BE59;
+}
+
+.background-yellow {
+    background-color: #EEC765;
+}
+
+.background-blue {
+    background-color: #6D99C1;
+}
+
+.background-magenta {
+    background-color: #B09098;
+}
+
+.background-cyan {
+    background-color: #87B5AE;
+}
+
+.background-white {
+    background-color: #D5DAD7;
+}
+
+/*
+** The "bright" ANSI argument does not affect the background color, but
+** we still want to change the colors in the picker.
+**/
+
+.colors .bright.background-black {
+    background-color: #373B40;
+}
+
+.colors .bright.background-red {
+    background-color: #DC6062;
+}
+
+.colors .bright.background-green {
+    background-color: #C6D256;
+}
+
+.colors .bright.background-yellow {
+    background-color: #FFDD58;
+}
+
+.colors .bright.background-blue {
+    background-color: #7FAAD7;
+}
+
+.colors .bright.background-magenta {
+    background-color: #C99EAA;
+}
+
+.colors .bright.background-cyan {
+    background-color: #95D6CC;
+}
+
+.colors .bright.background-white {
+    background-color: #E7EDEA;
+}
+
+/* Keep the text legible in the color picker */
+
+.colors .background-none {
+    color: #1D1D1D;
+}
+
+.colors .background-green {
+    color: #1D1D1D;
+}
+
+.colors .background-yellow {
+    color: #1D1D1D;
+}
+
+.colors .background-blue {
+    color: #1D1D1D;
+}
+
+.colors .background-magenta {
+    color: #1D1D1D;
+}
+
+.colors .background-cyan {
+    color: #1D1D1D;
+}
+
+.colors .background-white {
+    color: #1D1D1D;
+}
